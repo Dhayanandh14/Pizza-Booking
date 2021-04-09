@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NON VEG BILL</title>
+<link rel="icon" href="./favicon.png">
+
+</head>
+<body>
+    <style>
+        #main-bill{
+            /* padding: 140px; */
+            /* border: 1px solid; */
+            box-shadow: 1px 4px 14px 9px #d8cbcb;
+            width: 70%;
+            position: relative;
+            left: 170px;
+            border-radius: 10px;
+        }
+        #ad{
+            float: right;
+            position: relative;
+            top: -7px;
+            right: 40px
+        }
+        #head-bill{
+            padding: 10px;
+            background-color: #0b87ff;
+            color: white;
+            font-family: system-ui;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        #bill-image{
+            background-image: url(./making.gif);
+            background-size: 200px 191px;
+            background-position: -22px 0px;
+            width: 100%;
+            height: 200px;
+            background-size: 300px 225px;
+        }
+        #items{
+            background-color: #9c0000;
+            width: 100%;
+            height: 300px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+         #quan p{
+            display: inline-block;
+            margin-left: 0px;
+            font-family: system-ui;
+            font-weight: 500;
+            color: white;/* color: dodgerblue; */
+            border-bottom: 1px solid;
+            padding-right: 45px;
+            padding-bottom: 13px;
+            text-align: center;
+            padding-left: 40px;
+            font-weight: bold;
+        }
+        #quan{
+            position: relative;
+            top: -158px;
+            display: inline-block;
+            left: 34px;
+            /* width: 506px; */
+        }
+        #list-price{
+            position: relative;
+            top: -175px;
+            display: inline-block;
+            float: left;
+            left: 31px;
+            border-bottom: 1px solid #aeb9ae;
+            width: 527px; 
+            font-family: system-ui;
+            font-weight: 600;
+        }
+        #list-price p{
+            display: inline-block;
+            position: relative;
+            margin-left: 80px;
+        }
+        li{
+            list-style-type: none;
+        }
+        #totpiz{
+            font-size: 25px;
+            font-family: system-ui;
+            font-weight: 600;
+            color: white;/* color: dodgerblue; */
+        }
+        #tm{
+            font-size: 27px;
+            font-family: system-ui;
+            font-weight: bold;
+            text-align: end;
+        }
+        #bal{
+            font-size: 25px;
+            font-family: system-ui;
+            font-weight: 600;
+            color: white;/* color: dodgerblue; */
+            text-align: end;
+        }
+        #bm{
+            font-size: 25px;
+            font-family: system-ui;
+            font-weight: 700;
+            text-align: end;
+        }
+        #bname{
+            font-size: 20px;
+            font-family: system-ui;
+            font-weight: 700;
+            color:white;/* color: dodgerblue; */
+            text-align: end;
+        }
+        #billername{
+            font-size: 20px;
+            font-family: system-ui;
+            font-weight: 700;
+            text-align: end;
+        }
+        #mb{ 
+            font-size: 18px;
+            font-family: system-ui;
+            font-weight: 700;
+            color: white;/* color: dodgerblue; */
+            text-align: end;
+        }
+       #pnum{
+            font-size: 21px;
+            font-family: system-ui;
+            font-weight: 600;
+            text-align: end;
+        }
+        #pnum{
+            font-size: 21px;
+            font-family: system-ui;
+            font-weight: 600;
+            text-align: end;
+        }
+        #date{
+            font-size: 16px;
+            font-family: system-ui;
+            font-weight: bold;
+            text-align: end;
+            position: relative;
+            top: -28px;
+            right: 507px;
+            color: greenyellow;
+            float: left;
+        }
+        #ptot{
+            font-family: system-ui;
+            display: inline-block;
+            font-size: 30px;
+            font-weight: 700;
+            position: relative;
+             left: 24px;
+        }
+    </style>
+    <div id="main-bill">
+        <div id="head-bill">
+            <h2 style="display: inline-block;">Andy Pizza Shop</h2>
+            <p style="display: inline-block;margin-left: 30px;">202-555-0118</p>
+            <address id="ad">
+                224 NW 13th ave<br>
+                Portland, OR<br>
+                97209<br>
+                United States
+            </address>
+        </div>
+        <div id="bill-image">
+
+        </div>
+        <div id="items">
+            <div id="quan">
+                <p>Description</p>
+                <p>Quantity</p>
+                <p>Total Amount</p>
+            </div>
+            <div id="list-price">
+                <p style="position: relative;right: 28px;">Pizza</p>
+                <p style="position: relative;left: 34px;">1</p>
+                <p style="position: relative; left: 100px;" id="row-amount">1000</p>
+            </div>  
+            <div style="display: inline-block;">
+                <ul>
+                    <li id="totpiz">Total Amount of Paid</li>
+                    <li id="tm">₹0000</li>
+                    <li style="display: inline-block;font-size: 27px;font-weight: 600;color: white;
+                    font-family: system-ui;margin-left: 46px;position: relative;right: 16px;bottom: 4px;">Pizza price</li>
+                    <li id='ptot'></li>
+                    <li id="bal">Balance</li>
+                    <li id="bm">₹0</li>
+                    <li id="bname">Name</li>
+                    <li id="billername">*****</li>
+                    <li id="mb">Phone Number</li>
+                    <li id="pnum">---------</li>
+                    <li id="date">Date Of Bill: 21/01/2021</li>
+                </ul>
+            </div>
+        </div>
+        
+    <div>
+    <script>
+        name=prompt("Enter Your Name: ")
+        phno=prompt("Enter Mobile Number:")
+       alert(localStorage.getItem('totoo'))
+        var tm      =  document.getElementById("tm").innerHTML="₹"+localStorage.getItem("totbill")
+        var ptot=document.getElementById("ptot").innerHTML= "₹"+localStorage.getItem('totoo');
+        var tm      =  document.getElementById("bm").innerHTML="₹"+localStorage.getItem("balbill")
+         var bname  =  document.getElementById("billername").innerHTML=name
+        var pnum    =  document.getElementById("pnum").innerHTML=phno;
+        var ramount =  document.getElementById("row-amount").innerHTML="₹"+localStorage.getItem("totbill");
+        console.log(localStorage.getItem("totbill"))
+        console.log(localStorage.getItem("balbill"))
+       
+        
+    </script>
+</body>
+</html>

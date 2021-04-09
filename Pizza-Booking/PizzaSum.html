@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZA</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="icon" href="./favicon.png">
+</head>
+<body>
+    
+    <style>
+        body{
+           margin:0px;
+        }
+        #head-container{
+            display: inline-block;
+            width: 100%;
+            background: #ab131b;
+            height: 80px;
+            font-family: "Italian Plate No2 Bold","HelveticaNeue-CondensedBold","Arial Narrow",Arial,sans-serif;
+            font-weight: normal;
+        }
+        #head-right{
+            /* display: inline-block; */
+            float: right;
+            position: relative;
+            right: 27px;
+            font-weight: bold;
+            font-size: 18px;
+            top: -5px;
+        }
+        #logo-div{
+            display: inline-block;
+        }
+        #logo{
+            width: 73px;
+             margin: 2px 5px 5px 20px;
+        }
+        .order-login{
+            display: inline-block;
+            margin-left: 34px;
+            color: white;
+            position: relative;
+            top: -14px;
+            font-family: "Italian Plate No2 Bold","HelveticaNeue-CondensedBold","Arial Narrow",Arial,sans-serif;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        #start{
+            /* background: rebeccapurple; */
+            width: 180px;
+            padding: 0px 0px 0px 10px;
+            height: 44px;
+            border-radius: 9px;
+            transition: 0.3s;
+            position: relative;
+            top: -3px;
+            font-family: "Italian Plate No2 Bold","HelveticaNeue-CondensedBold","Arial Narrow",Arial,sans-serif;
+        }
+        #start:hover{
+            background: #7d1417;
+            transition: 0.5s;
+        }
+        /* #shop-cart{
+            
+        } */
+        #head-2{
+            background-color: white;
+            position: relative;
+            top: -4px;
+        }
+        #menus{
+            display: inline-block;
+        }
+        #menus li{
+            color: black;
+            display: inline-block;
+            list-style-type: none;
+            margin-left: 23px;
+            position: relative;
+            right: 40px;
+            font-weight: 700;
+            top: 5px;
+        }
+        #promo{
+            width: 199px;
+            height: 18px;
+            font-size: 14px;
+            line-height: 19px;
+            color: #626262;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            padding: 9px;
+            border-radius: 6px;
+            border: 1px solid #929292;
+            outline:aliceblue ;
+        }
+        #apply{
+            background-color: black;
+            color: white;
+            padding: 10px 10px 11px 15px;
+            position: relative;
+            right: 7px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            font-family: sans-serif;
+            transition: 0.4s;
+        }
+        #apply:hover{
+            background-color: #333;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        #doll{
+            position: relative;
+            float: right;
+            top: -53px;
+            left: 168px;
+            font-size: 31px;
+            font-family: "Italian Plate No2 Bold","HelveticaNeue-CondensedBold","Arial Narrow",Arial,sans-serif;
+            font-weight: bold;
+            font-size: 33px;
+            line-height: 1;
+            letter-spacing: -1px;
+            color: #ab131b;
+            border-left: 2px solid #d1d1d1;
+            padding: 16px 10px 16px 13px;
+        }
+        #dolsy{
+            font-size: 22px;
+            position: relative;
+            top: -6px;
+        }
+        #rewards{
+            color: black;
+            font-size: 27px;
+            font-family: "Italian Plate No2 Bold","HelveticaNeue-CondensedBold","Arial Narrow",Arial,sans-serif;
+            font-weight: normal;
+            -webkit-font-smoothing: antialiased;
+        }
+        #op-food{
+            width: 100%;
+            height: 100%;
+        }
+        #food-div{
+            display: inline-block;
+            position: relative;
+            top: -68px;
+        }
+        #word-food{
+            position: absolute;
+            top: 40px;
+            left: 45px;
+            transform: skew(4deg,-12deg);
+            font-size: 47px;
+            font-family: system-ui;
+            color: white;
+        }
+        #word-food strong{
+            background-color: #ce2735;
+            margin-top: 20px;
+            padding: 8px 14px 8px 12px;
+        }
+        #epic{
+            position: relative;
+            top: -38px;
+        }
+        #top1{
+            position: relative;
+            top: -10px;
+        }
+        #cata{
+            text-transform: uppercase;
+            text-align: center;
+            font-family: SharpSansBold,system-ui,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
+            position: relative;
+            top: -37px;
+        }
+        #veg{
+            width: 39%;
+            display: inline-block;
+            margin-right: 60px;
+            position: relative;
+            right: 8px;
+        }
+        #nonveg {
+            width: 39%;
+            display: inline-block;
+            position: relative;
+            right: 6px;
+        }
+        #veg-word{
+            /* display: inline-block; */
+            position: relative;
+            top: 27px;
+            float: left;
+            left: 172px;
+            background-color: forestgreen;
+            padding: 15px 21px 10px 123px;
+            box-shadow: 1px 2px darkolivegreen;
+            border-radius: 11px;
+            width: 176px;
+            color: white;
+            /* margin-top: 10px; */
+            font-family: system-ui;
+            cursor: pointer;
+            transition: .3s;
+        }
+        #veg-word:hover{
+            background-color: rgb(86, 153, 86);
+            transition: .3s;
+        }
+
+        #non-word{
+            /* display: inline-block; */
+            position: relative;
+            top: 18px;
+            right: 172px;
+            float: right;
+            background-color: antiquewhite;
+            padding: 20px 20px 15px 95px;
+            width: 239px;
+            border-radius: 11px;
+            color: white;
+            background: darkred;
+            box-shadow: 1px 2px darkgrey;
+            cursor: pointer;
+            transition: .3s;
+            font-family: system-ui;
+        }
+        #non-word:hover{
+            background-color: rgb(134, 56, 56);
+            transition: .3s;
+        }
+        #footer{
+            margin-top: 200px;
+            background-color: black;
+            color: white;
+            font-family: system-ui;
+        }
+        li{
+            list-style-type: none;
+        }
+        #order{
+            display: inline-block;
+            margin-left: 90px;
+            margin-right: 175px;
+            margin-top: 24px;
+            position: relative;
+            top: 5px;
+        }
+        #order-li{
+            position: relative;
+            right: 35px;
+        }
+        
+        #about{
+            display: inline-block;
+            margin-right: 182px;
+            position: relative;
+            top: -39px;
+        }
+        #policy{
+            display: inline-block;
+            position: relative;
+            top: -41px;
+        }
+        #blog{
+            display: inline-block;
+            margin-left: 214px;
+            position: relative;
+            top: -66px;
+        }
+        #appicon{
+            display: inline-block;
+            position: relative;
+            left: 466px;
+            margin-top: 11px;
+        }
+        #iapp{
+            width: 135px;
+            margin-right: 33px;
+            border: 1px solid grey;
+            border-radius: 6px;
+        }
+        #gapp{
+            width: 135px;
+            border: 1px solid grey;
+            border-radius: 6px;
+        }
+        #p1{
+            font-size: 12px;
+            position: relative;
+            left: 101px;
+            display: inline-block;
+            top: 15px;
+            color: #78838C;
+        }
+        #p2{
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            top: 42px;
+            right: 521px;
+            font-size: 12px;
+            color: #78838C;
+        }
+        #p3{
+            display: inline-block;
+            font-size: 12px;
+            left: 560px;
+            position: relative;
+            top: 25px;
+            color: #78838C;
+        }
+        #p4{
+            display: inline-block;
+            position: relative;
+            top: 53px;
+            font-size: 12px;
+            left: 220px;
+            color: #78838C;
+        }
+
+      
+    </style>
+    <div id="container">
+        <div id="head-container">
+            <div id="logo-div"> 
+                <img src="./logo.png" id="logo" alt="">
+            </div>
+            <div id="head-right">
+                <ul style="display: inline-block;position: relative;top: 8px;">
+                    <li class="order-login" id="start">
+                        <a href="#cata" style=" text-decoration: none;color:white">
+                            <h4 style="position: relative;top: -11px;">START YOUR ORDERS</h4>
+                        </a>
+                    </li>
+                    <li class="order-login">EN</li>
+                    <li class="order-login">LOG IN</li>
+                    <li class="order-login" style="background-color:#7d1417;padding: 8px;border-radius: 6px;">SIGN UP</li>
+                </ul>
+            </div>
+        </div>
+        <div id="head-2">
+            <ul id="menus">
+                <li id="rewards">MENU</li>
+                <li id="rewards">SPECIALS</li>
+                <li id="rewards">ANDY REWARDS</li>
+            </ul>
+            <ul id="shop-cart" style="list-style-type: none;float: right;margin-right: 190px;">
+                <li>
+                    <input type="text" id="promo" placeholder="Enter a promo code"><label id="apply">Apply</label>
+                </li>
+                <li id="doll"><i style="font-size: 30px; position: relative; right: 5px; color:#333333;" class="fas fa-shopping-cart"></i><span id="dolsy">$</span>Rs.0.00</li>
+
+            </ul>
+        </div>
+        <div id="food-div">
+            <img id="op-food" src="./p1-2021-StuffedCrust-hero-compressed.webp" alt="">
+            <h1 id="word-food">
+                <strong>NEW</strong><br><br>
+                <strong id="epic">EPIC STUFFED CRUST</strong><br>
+                <strong id="top1">1-TOPPING PIZZA</strong>
+            </h1>
+        </div>
+
+        <h1 id="cata">choose category</h1>
+        <center>
+                <img src="./veg-pizza.jpg" alt="" id="veg">
+            
+           
+                <img src="./non-veg.jpg" alt="" id="nonveg">
+        </center>
+        <div> 
+            <h1 id="veg-word" onclick="VEG()">VEG</h1>
+            <h1 id="non-word" onclick="NONVEG()">NON VEG</h1>
+        </div>
+        <div id="footer">
+            <div id="order">
+                <h3>Order Now</h3>
+                <ul id="order-li">
+                    <li>Deals</li>
+                    <li>Pizza</li>
+                    <li>Sides</li>
+                    <li>Drinks</li>
+                    <li>Deserts</li>
+                </ul>
+            </div>
+            <div id="about">
+                <h3>About</h3>
+                <li>about</li>
+                <li>Contactless delivery</li>
+                <li>Nutrition</li>
+            </div>
+            <div id="policy">
+                <h3>Our Policies</h3>
+                <li>Terms and Condition</li>
+                <li>Responsible disclosure</li>
+                <li>FAQs & Help</li>
+            </div>
+            <div id="blog">
+                <h3>Visit Andy Shop</h3>
+                <li>Locate a Store</li>
+                <li>Global Blog</li>
+            </div>
+            <div id="appicon">
+                <img src="./apple-store.png" id="iapp" alt="">
+                <img src="./google-play.png" id="gapp" alt="">
+            </div>
+          <div style="height: 148px;">
+            <p id="p1">Order a delicious pizza on the go, anywhere, anytime. Andy Pizza Shop is happy to assist you with your home delivery. Every time you order, you get a hot and fresh pizza delivered at your doorstep in   less than</p>
+            <p id="p2">thirty minutes. *T&C Apply.</p>
+            <p id="p3">Hurry up and place your order now!</p>
+            <p id="p4">© 2021 Andy Pizza Shop India. All rights reserved. License Number: 10017011004220</p>
+           </div>
+        </div>
+    </div>
+    
+    <!-- <label for="veg" name="variaty">VEG</label>
+    <input type="radio" name="variaty" id="veg">
+    <label for="nonveg" name="variaty">NONVEG</label>
+    <input type="radio" name="variaty" id="nonveg">
+    <button id="select" onclick="select()"> SELECT</button> -->
+    <script>
+        var veg = document.getElementById("veg")
+        var nonveg = document.getElementById("nonveg")
+        function VEG(){ window.open( "veg.html", "_blank")}    
+        function NONVEG(){window.open( "nonveg.html", "_blank")}
+    </script>
+    
+    
+    
+</body>
+</html>

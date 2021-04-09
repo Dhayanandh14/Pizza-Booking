@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEG PIZZA</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+<link rel="icon" href="./favicon.png">
+
+</head>
+<body>
+    <style>
+        body{
+            font-family: system-ui;
+            margin:0px;
+            
+        }
+         
+        #head-container{
+            display: inline-block;
+            width: 100%;
+            background: #ab131b;
+            height: 80px;
+            font-family: "Italian Plate No2 Bold","HelveticaNeue-CondensedBold","Arial Narrow",Arial,sans-serif;
+            font-weight: normal;
+        }
+        #head-right{
+            /* display: inline-block; */
+            float: right;
+            position: relative;
+            right: 27px;
+            font-weight: bold;
+            font-size: 18px;
+            top: -5px;
+        }
+        #logo-div{
+            display: inline-block;
+        }
+        #logo{
+            width: 73px;
+            margin: 2px 5px 5px 20px;
+            position: relative;
+            top: 2px;
+         }
+        .order-login{
+            display: inline-block;
+            margin-left: 34px;
+            color: white;
+            position: relative;
+            top: -14px;
+            font-family: "Italian Plate No2 Bold","HelveticaNeue-CondensedBold","Arial Narrow",Arial,sans-serif;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        #start{
+            /* background: rebeccapurple; */
+            width: 180px;
+            padding: 0px 0px 0px 10px;
+            height: 44px;
+            border-radius: 9px;
+            transition: 0.3s;
+            position: relative;
+            top: -3px;
+            font-family: "Italian Plate No2 Bold","HelveticaNeue-CondensedBold","Arial Narrow",Arial,sans-serif;
+        }
+        #start:hover{
+            background: #7d1417;
+            transition: 0.5s;
+        }
+        #shop-cart{
+            
+        }
+        #head-2{
+            background-color: white;
+        }
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+          position: relative;
+          bottom: 91px;
+          left: 728px;
+        }
+        
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #97a097;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        
+        input:checked + .slider {
+            background-color: #02b127;
+        }
+        
+        input:focus + .slider {
+          box-shadow: 0 0 1px #2196F3;
+        }
+        
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        
+        /* Rounded sliders */
+        .slider.round {
+          border-radius: 34px;
+        }
+        
+        .slider.round:before {
+          border-radius: 50%;
+        }
+        #regular-size{
+            width: 300px;
+            height: 200px;
+            display: inline-block;
+            position: relative;
+            left: 16px;
+            top: 15px;
+        }
+        #regular-label{
+            float: right;
+            position: relative;
+            top: 85px;
+            right: 600px;
+            font-size: 30px;
+            font-family: system-ui;
+            font-weight: 600;
+        }
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            /* Hide the browser's default checkbox */
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            }
+
+            /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            }
+
+            /* On mouse-over, add a grey background color */
+        .container:hover input ~ .checkmark {
+            background-color: #ccc;
+            }
+
+            /* When the checkbox is checked, add a blue background */
+        .container input:checked ~ .checkmark {
+            background-color: #2196F3;
+            }
+
+            /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+            }
+
+            /* Show the checkmark when checked */
+        .container input:checked ~ .checkmark:after {
+            display: block;
+            }
+
+            /* Style the checkmark/indicator */
+        .container .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+         }
+         #rbc{
+            /* margin-top: 90px; */
+            font-family: 'Signika', sans-serif;
+            font-weight: bold;
+            position: relative;
+            top: 40px;
+         }
+       
+         #rtp{
+            margin-top: 95px;
+            font-family: 'Signika', sans-serif;
+            font-weight: bold;
+         }
+         #rdip{
+             margin-top: 70px;
+             font-family: 'Signika', sans-serif;
+             font-weight: bold;
+         }
+         #price{
+            display: inline-block;
+            position: relative;
+            bottom: 1px;
+            left: 430px;
+            font-size: 21px;
+            font-family: fantasy;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 800;
+        }
+        #size-tit{
+            position: relative;
+            left: 200px;
+            font-size: 21px;
+            font-family: fantasy;
+            display: inline-block;
+            margin-left: 120px;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 800;
+        }
+        #pimg{
+            display: inline-block;
+            font-size: 21px;
+            font-family: 'Rubik', sans-serif;
+            margin-left: 100px;
+            font-weight: 800;
+        }
+        #paying:hover{
+            background-color: rgb(67, 126, 67);
+        }
+        #paying{
+            padding: 20px 112px 19px 106px;
+            background: green;
+            outline: springgreen;
+            border: greenyellow;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            position: relative;
+            right: -218px;  
+            margin-top: 50px;
+            float: right;
+            font-size: 27px;
+            margin-bottom: 26px;
+            border-radius: 5px;
+            cursor: pointer;
+            top: -413px;
+            }
+        #back-div{
+            background-image: url("./blur-back2.jpg");
+            background-repeat: no-repeat;
+            /* backdrop-filter: blur(5px); */
+            background-size:1500px;
+            color: white;
+        }
+        #back-piz2{
+            background-image: linear-gradient(to right, green , #5dbd21);
+            color: white;
+            background-position: 0px -171px;
+        }
+        #extrachoices{
+            /* display: inline-block; */
+            text-align: center;
+            background: green;
+            height: 73px;
+            padding-top: 23px;
+            /* margin-bottom: 24px; */
+            margin: 53px 0px 52px 0px;
+            color: white;
+        }
+        #pointing{
+            position: absolute;
+            top: 3px;
+            right: 70px;
+        }
+        #abovepay{
+            width: 22%;
+            position: relative;
+            top: -369px;
+            left: 83px
+        }
+        #footer{
+            margin-top: 200px;
+            background-color: black;
+            color: white;
+            font-family: system-ui;
+        }
+        li{
+            list-style-type: none;
+        }
+        #order{
+            display: inline-block;
+            margin-left: 90px;
+            margin-right: 175px;
+            margin-top: 24px;
+            position: relative;
+            top: 5px;
+        }
+        #order-li{
+            position: relative;
+            right: 35px;
+        }
+        
+        #about{
+            display: inline-block;
+            margin-right: 182px;
+            position: relative;
+            top: -39px;
+        }
+        #policy{
+            display: inline-block;
+            position: relative;
+            top: -41px;
+        }
+        #blog{
+            /* display: inline-block; */
+            margin-left: 214px;
+            position: relative;
+            top: -185px;
+            float: right;
+            left: -100px;
+        }
+        #appicon{
+            display: inline-block;
+            position: relative;
+            left: 466px;
+            margin-top: 11px;
+        }
+        #iapp{
+            width: 135px;
+            margin-right: 33px;
+            border: 1px solid grey;
+            border-radius: 6px;
+        }
+        #gapp{
+            width: 135px;
+            border: 1px solid grey;
+            border-radius: 6px;
+        }
+        #p1{
+            font-size: 12px;
+            position: relative;
+            left: 101px;
+            display: inline-block;
+            top: 15px;
+            color: #78838C;
+        }
+        #p2{
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            top: 42px;
+            right: 550px;
+            font-size: 12px;
+            color: #78838C;
+        }
+        #p3{
+            display: inline-block;
+            font-size: 12px;
+            left: 528px;
+            position: relative;
+            top: 25px;
+            color: #78838C;
+        }
+        #p4{
+            display: inline-block;
+            position: relative;
+            top: 53px;
+            font-size: 12px;
+            left: 220px;
+            color: #78838C;
+        }
+        
+           
+        </style>
+        </head>
+        <body>
+            <div id="head-container">
+                <div id="logo-div"> 
+                    <img src="logo.png" id="logo" alt="">
+                </div>
+                <div id="head-right">
+                    <ul style="display: inline-block;position: relative;top: 8px;">
+                        <li class="order-login" id="start">
+                            <a href="#regular-size" style=" text-decoration: none;color:white">
+                                <h4 style="position: relative;top: -11px;">START YOUR ORDERS</h4>
+                            </a>
+                        </li>
+                        <li class="order-login">EN</li>
+                        <li class="order-login">LOG IN</li>
+                        <li class="order-login" style="background-color:#7d1417;padding: 8px;border-radius: 6px;">SIGN UP</li>
+                    </ul>
+                </div>
+            </div>
+        <div>
+            <p id="pimg">IMAGES</p>
+            <p for="regular" id="size-tit">SIZE</p> 
+            <p style="display: inline-block;" id="price">PRICE</p>
+        </div>
+    <div id="back-div">
+        <div id="rdiv">
+            <img src="./regular.jpg" id="regular-size" alt="">
+            
+            <label for="regular" id="regular-label">REGULAR <span style="position:relative;left:172px">₹ 99</span></label>
+            <label class="switch" >
+            <input type="checkbox" id="regular">
+            <span class="slider round"></span>
+            </label>
+        
+        </div>
+        
+            <br>
+            <br>
+            <br>
+            
+        <!-- <label for="regular">REGULAR</label>
+        <input type="checkbox" id="regular">
+        <label for="regular">Price 99</label> -->
+
+        <div>
+            <img src="./medium.jfif" id="regular-size" alt="">
+            <label for="medium" id="regular-label">MEDIUM <span style="position:relative;left: 190px;">₹ 195</span></label>
+            <label class="switch" >
+            <input type="checkbox" id="medium">
+            <span class="slider round"></span>
+            </label>
+        </div>
+        <br>
+        <br>
+        <div>
+            <img src="./large.jpg" id="regular-size" alt="">
+            <label for="large" id="regular-label">LARGE <span style="position:relative;left: 190px;">₹ 400</span></label>
+            <label class="switch" style="position: relative;left: 737px;" >
+            <input type="checkbox" id="large">
+            <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    <h1 id="extrachoices">EXTRA CHOICES</h1>
+    <div id="back-piz2">
+
+   
+        <div id="rbc">
+            <h1 style="display: inline-block;position: relative;top: -25px; left: 30px;">CHOICE OF CRUST</h1>
+
+            <label class="container" style="float: right; right: 225px;font-size: 19px;">CHEESE OF BURST
+                <input type="checkbox" id="brust">
+                <span class="checkmark"></span>
+            </label>
+        
+            <label class="container" style="float: right;
+            right: 352px;font-size: 19px;">CHEESE OF CRUST
+                <input type="checkbox" id="crust">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div id="rtp">
+            <h1 style="display: inline-block;position: relative;top: -25px; left: 30px;">CHOICE OF TOPPINGS</h1>
+            <label class="container" style="float: right;right: 195px;font-size: 19px;">EXTRA VEG TOPPINGS 
+                <input type="checkbox" id="tp1">
+                <span class="checkmark"></span>
+            </label>
+        
+            <label class="container" style="float: right;right: 355px;font-size: 19px;">EXTRA CHEESE 
+                <input type="checkbox" id="tp2">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div id="rdip">
+            <h1  style="display: inline-block;position: relative;top: -25px; left: 30px;">CHOICE OF DIPS</h1>
+            <label class="container"  style="float: right;right: 180px;font-size: 19px;">CHEESE JALAPENO DIP
+                <input type="checkbox" id="dip2">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container" style="float: right;right: 370px;font-size: 19px;">CHEESE DIP
+                <input type="checkbox" id="dip1">
+                <span class="checkmark"></span>
+            </label>
+        
+        </div>
+    
+        <div>
+            <img id="pointing" src="./animated-clipart-pizza-16.gif" alt="" >
+            <!-- <img src="./a1.gif" alt=""> -->
+            <img src="./a1.gif" alt="">
+            <img src="./abovepay.gif" id="abovepay" alt="">
+            <img src="./a6.gif" style="left: -73px;width: 25%;position: relative;bottom: 277px;float: right;" alt="">
+            
+            <button onclick="paying()" id="paying">PAY</button>
+        </div>
+        <div id="footer">
+            <div id="order">
+                <h3>Order Now</h3>
+                <ul id="order-li">
+                    <li>Deals</li>
+                    <li>Pizza</li>
+                    <li>Sides</li>
+                    <li>Drinks</li>
+                    <li>Deserts</li>
+                </ul>
+            </div>
+            <div id="about">
+                <h3>About</h3>
+                <li>about</li>
+                <li>Contactless delivery</li>
+                <li>Nutrition</li>
+            </div>
+            <div id="policy">
+                <h3>Our Policies</h3>
+                <li>Terms and Condition</li>
+                <li>Responsible disclosure</li>
+                <li>FAQs & Help</li>
+            </div>
+            <div id="blog">
+                <h3>Andy Shop</h3>
+                <li>Locate a Store</li>
+                <li>Global Blog</li>
+            </div>
+            <div id="appicon">
+                <img src="./apple-store.png" id="iapp" alt="">
+                <img src="./google-play.png" id="gapp" alt="">
+            </div>
+          <div style="height: 177px;">
+            <p id="p1">Order a delicious pizza on the go, anywhere, anytime. Andy Pizza Shop is happy to assist you with your home delivery. Every time you order, you get a hot and fresh pizza delivered at your doorstep in   less than</p>
+            <p id="p2">thirty minutes. *T&C Apply.</p>
+            <p id="p3">Hurry up and place your order now!</p>
+            <p id="p4">© 2021 Andy Pizza Shop India. All rights reserved. License Number: 10017011004220</p>
+           </div>
+        </div>
+    </div>
+
+    <!-- <br>
+    <label for="medium">MEDIUM</label>
+    <input type="checkbox" id="medium">
+    <label for="medium">Price 195</label>
+
+    <br>
+    <label for="large">LARGE</label>
+    <input type="checkbox" id="large">
+    <label for="large">Price 400</label>
+    <br> -->
+<!--    
+    <label for="cash">ENTER MONEY</label>
+    <input type="number" id="cash" >
+    <br>
+    <br> -->
+    <!-- <label for="username">Name:</label>
+    <input type="text" id="username">
+    <br>
+    <label for="phNo">PHONE NUMBER:</label>
+    <input id="phNo" type="number" maxlength="10" > -->
+
+    <!-- <br>
+    <br>
+    <button id="pay" onclick="paying()">PAY</button>
+    <br> -->
+    <script>
+        var r = document.getElementById("regular")
+        var m = document.getElementById("medium")
+        var l = document.getElementById("large")
+        var cr = document.getElementById("crust")
+        var br = document.getElementById("brust")
+        var tp1 = document.getElementById("tp1")
+        var tp2 = document.getElementById("tp2")
+        var dip1 = document.getElementById("dip1")
+        var dip2 = document.getElementById("dip2")
+        var cash =  document.getElementById("cash")
+        var total=0,reamount,balance,cash,leftbal,name,phno;
+        function paying()
+        {
+            if(r.checked == true && m.checked == true && l.checked ==true){
+                if(br.checked == true && cr.checked == true){
+                   total = (99+165+400+70+75)
+                }
+                else if(cr.checked == true){
+                   total = (99+165+400+75)
+                   console.log("total 1:",total)
+                }
+                else if(br.checked == true){
+                   total = (99+165+400+70)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+85+75
+                }
+                else if(tp2.checked == true){
+                    total = total + 75
+                    console.log("total 2:",total)
+                }
+                else if(tp1.checked == true){
+                    total = total + 85
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = total+80+100
+                }
+                console.log("middle",total)
+                if(dip2.checked == true){
+                    total = total + 100
+                    console.log("Total 3: ",total)
+                }
+                else if(dip1.checked == true){
+                    total = total + 80
+                }
+            }
+            else if((r.checked == true) &&( m.checked == true)){
+                if(br.checked == true && cr.checked == true){
+                   total = (99+300+70+75)
+                }
+                else if(br.checked == true){
+                   total = (99+300+70)
+                }
+                else if(cr.checked == true){
+                   total = (99+300+75)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+85+75
+                }
+                else if(tp1.checked == true){
+                    total = total +85
+                }
+                else if(tp2.checked == true){
+                    total = total +75
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = total+80+100
+                }
+                else if(dip1.checked == true){
+                    total = total +80
+                }
+                else if(dip2.checked == true){
+                    total = total +100
+                }
+            }
+            else if((r.checked == true)  && (l.checked ==true)){
+                if(br.checked == true && cr.checked == true){
+                   total = (99+400+70+75)
+                }
+                else if(br.checked == true){
+                   total = (99+400+70)
+                }
+                else if(cr.checked == true){
+                   total = (99+400+75)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+85+75
+                }
+                else if(tp1.checked == true){
+                    total = total + 85
+                }
+                else if(tp2.checked == true){
+                    total = total + 75
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = total+80+100
+                }
+                else if(dip1.checked == true){
+                    total = total + 80
+                }
+                else if(dip2.checked == true){
+                    total = total + 100
+                }
+            }
+            else if((m.checked == true) && (l.checked ==true)){
+                if(br.checked == true && cr.checked == true){
+                   total = (300+400+70+75)
+                }
+                else if(br.checked == true){
+                   total = (300+400+70)
+                }
+                else if(cr.checked == true){
+                   total = (300+400+75)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+300+400+85+75
+                }
+                else if(tp1.checked == true){
+                    total = total +85
+                }
+                else if(tp2.checked == true){
+                    total = total +75
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = total+80+100
+                }
+                else if(dip1.checked == true){
+                    total = total +80
+                }
+                else if(dip2.checked == true){
+                    total = total +100
+                }
+            }
+            else if(r.checked==true){
+                if(br.checked == true && cr.checked == true){
+                   total = (99+70+75)
+                }
+                else if(br.checked == true){
+                   total = (99+70)
+                   console.log(total)
+                }
+                else if(cr.checked == true){
+                   total = (99+75)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+85+75
+                }
+                else if(tp1.checked == true){
+                    total = total +85
+                    console.log(total)
+                }
+                else if(tp2.checked == true){
+                    total = total +75
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = total+80+100
+                }
+                else if(dip1.checked == true){
+                    total = total +80
+                    console.log(total)
+                }
+                else if(dip2.checked == true){
+                    total = total +100
+                }
+            }
+            else if(m.checked == true){
+                if(br.checked == true && cr.checked == true){
+                   total = (300+70+75)
+                }
+                else if(br.checked == true){
+                   total = (300+70)
+                }
+                else if(cr.checked == true){
+                   total = (300+75)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+300+85+75
+                }
+                else if(tp1.checked == true){
+                    total = total +300+85
+                }
+                else if(tp2.checked == true){
+                    total = total +300+75
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = tota+300+80+100
+                }
+                else if(dip1.checked == true){
+                    total = total +300+80
+                }
+                else if(dip2.checked == true){
+                    total = total +300+100
+                }
+            }
+            else if(l.checked == true){
+                if(br.checked == true && cr.checked == true){
+                   total = (400+70+75)
+                }
+                else if(br.checked == true){
+                   total = (400+70)
+                }
+                else if(cr.checked == true){
+                   total = (400+75)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+85+75
+                }
+                else if(tp1.checked == true){
+                    total = total +85
+                }
+                else if(tp2.checked == true){
+                    total = total +75
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = total+80+100
+                }
+                else if(dip1.checked == true){
+                    total = total +80
+                }
+                else if(dip2.checked == true){
+                    total = total +100
+                }
+            }
+            
+         cash=Number(prompt("Enter Amount For Pizza: "));
+
+          if(cash>=total && cash>=1){
+              balance = total-cash;
+              console.log(total)
+         console.log(Math.abs(balance))
+         leftbal=Math.abs(balance)
+        //  localStorage.setItem("buyername",name)
+        //  localStorage.setItem("buyernum",phno)
+          localStorage.setItem("totbill",cash)
+          localStorage.setItem("totoo",total)
+          localStorage.setItem("balbill",leftbal)
+         window.open("Billing.html","_blank")
+          }
+          else{
+              alert("SORRY YOU ENTERED INVALID AMOUNT :(")
+            //   if(confirm("Invalid amount you entered!!")){
+            //       reamount = prompt("Enter Amount");
+            //       balance=reamount-total
+            //       window.open("Billing.html","_blank")
+            //   }
+            //   else{
+            //       window.open( "PizzaSum.html", "_blank")
+            //   }
+          }
+     
+        
+        }
+
+
+
+    </script>
+</body>
+</html>

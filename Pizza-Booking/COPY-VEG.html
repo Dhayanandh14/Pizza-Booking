@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEG</title>
+</head>
+<body>
+    <label for="regular">REGULAR</label>
+    <input type="checkbox" id="regular">
+    <label for="regular">Price 99</label>
+
+    <br>
+    <label for="medium">MEDIUM</label>
+    <input type="checkbox" id="medium">
+    <label for="medium">Price 195</label>
+
+    <br>
+    <label for="large">LARGE</label>
+    <input type="checkbox" id="large">
+    <label for="large">Price 400</label>
+    <br>
+    <br>
+    <button onclick="Select()">SELECT SIZE</button>
+    <h1>CHOICE OF CRUST</h1>
+    <label for="brust">Cheese of brust</label>
+    <input type="checkbox" id="brust">
+    <br>
+    <label for="crust">cheese of crust</label>
+    <input type="checkbox" id="crust">
+    <br>
+    <br>
+    <button id="cb">CHOOSE</button>
+    <br>
+    <h1>CHOICE OF TOPPINGS</h1>
+    <label for="tp1">EXTRA VEG TOPPINGS</label>
+    <input type="checkbox" id="tp1">
+    <br>
+    <label for="tp2">EXTRA CHEESE</label>
+    <input type="checkbox" id="tp2">
+    <br>
+    <br>
+    <button id="topping" onclick="topping()" >CHOOSE</button>
+    <br>
+    <br>
+    <h1>CHOICE OF DIPS</h1>
+    <label for="dip1">CHEESE DIP</label>
+    <input type="checkbox" id="dip1">
+    <br>
+    <label for="dip2">CHEESE JALAPENO DIP</label>
+    <input type="checkbox" id="dip2">
+    <br>
+    <label for="username">Name:</label>
+    <input type="text" id="username">
+    <br>
+    <label for="phNo">PHONE NUMBER:</label>
+    <input id="phNo" type="number" maxlength="10" >
+
+    <br>
+    <br>
+    <button id="pay" onclick="paying()">PAY</button>
+    <br>
+    <script>
+        var r = document.getElementById("regular")
+        var m = document.getElementById("medium")
+        var l = document.getElementById("large")
+        var cr = document.getElementById("crust")
+        var br = document.getElementById("brust")
+        var tp1 = document.getElementById("tp1")
+        var tp2 = document.getElementById("tp2")
+        var dip1 = document.getElementById("dip1")
+        var dip2 = document.getElementById("dip2")
+        var cash =  document.getElementById("cash")
+        var total,reamount,balance;
+        function paying()
+        {
+            if(r.checked == true && m.checked == true && l.checked ==true){
+                if(br.checked == true && cr.checked == true){
+                   total = (99+300+400+70+75)
+                }
+                if(br.checked == true){
+                   total = (99+300+400+70)
+                }
+                if(cr.checked == true){
+                   total = (99+300+400+75)
+                   console.log("total 1:",total)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+85+75
+                }
+                if(tp1.checked == true){
+                    total = total + 85
+                }
+                if(tp2.checked == true){
+                    total = total + 75
+                    console.log("total 2:",total)
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = total+80+100
+                }
+                if(dip1.checked == true){
+                    total = total + 80
+                }
+                if(dip2.checked == true){
+                    total = total + 100
+                    console.log("Total 3: ",total)
+                }
+            }
+            else if((r.checked == true) &&( m.checked == true)){
+                if(br.checked == true && cr.checked == true){
+                   total = (99+300+70+75)
+                }
+                else if(br.checked == true){
+                   total = (99+300+70)
+                }
+                else if(cr.checked == true){
+                   total = (99+300+75)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+85+75
+                }
+                else if(tp1.checked == true){
+                    total = total +85
+                }
+                else if(tp2.checked == true){
+                    total = total +75
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = total+80+100
+                }
+                else if(dip1.checked == true){
+                    total = total +80
+                }
+                else if(dip2.checked == true){
+                    total = total +100
+                }
+            }
+            else if((r.checked == true)  && (l.checked ==true)){
+                if(br.checked == true && cr.checked == true){
+                   total = (99+400+70+75)
+                }
+                else if(br.checked == true){
+                   total = (99+400+70)
+                }
+                else if(cr.checked == true){
+                   total = (99+400+75)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+85+75
+                }
+                else if(tp1.checked == true){
+                    total = total + 85
+                }
+                else if(tp2.checked == true){
+                    total = total + 75
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = total+80+100
+                }
+                else if(dip1.checked == true){
+                    total = total + 80
+                }
+                else if(dip2.checked == true){
+                    total = total + 100
+                }
+            }
+            else if((m.checked == true) && (l.checked ==true)){
+                if(br.checked == true && cr.checked == true){
+                   total = (300+400+70+75)
+                }
+                else if(br.checked == true){
+                   total = (300+400+70)
+                }
+                else if(cr.checked == true){
+                   total = (300+400+75)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+300+400+85+75
+                }
+                else if(tp1.checked == true){
+                    total = total +85
+                }
+                else if(tp2.checked == true){
+                    total = total +75
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = total+80+100
+                }
+                else if(dip1.checked == true){
+                    total = total +80
+                }
+                else if(dip2.checked == true){
+                    total = total +100
+                }
+            }
+            else if(r.checked==true){
+                if(br.checked == true && cr.checked == true){
+                   total = (99+70+75)
+                }
+                else if(br.checked == true){
+                   total = (99+70)
+                }
+                else if(cr.checked == true){
+                   total = (99+75)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+85+75
+                }
+                else if(tp1.checked == true){
+                    total = total +85
+                }
+                else if(tp2.checked == true){
+                    total = total +75
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = total+80+100
+                }
+                else if(dip1.checked == true){
+                    total = total +80
+                }
+                else if(dip2.checked == true){
+                    total = total +100
+                }
+            }
+            else if(m.checked == true){
+                if(br.checked == true && cr.checked == true){
+                   total = (300+70+75)
+                }
+                else if(br.checked == true){
+                   total = (300+70)
+                }
+                else if(cr.checked == true){
+                   total = (300+75)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+300+85+75
+                }
+                else if(tp1.checked == true){
+                    total = total +300+85
+                }
+                else if(tp2.checked == true){
+                    total = total +300+75
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = tota+300+80+100
+                }
+                else if(dip1.checked == true){
+                    total = total +300+80
+                }
+                else if(dip2.checked == true){
+                    total = total +300+100
+                }
+            }
+            else if(l.checked == true){
+                if(br.checked == true && cr.checked == true){
+                   total = (400+70+75)
+                }
+                else if(br.checked == true){
+                   total = (400+70)
+                }
+                else if(cr.checked == true){
+                   total = (400+75)
+                }
+                if(tp1.checked == true && tp2.checked==true){
+                    total = total+85+75
+                }
+                else if(tp1.checked == true){
+                    total = total +85
+                }
+                else if(tp2.checked == true){
+                    total = total +75
+                }
+                if(dip1.checked == true && dip2.checked==true){
+                    total = total+80+100
+                }
+                else if(dip1.checked == true){
+                    total = total +80
+                }
+                else if(dip2.checked == true){
+                    total = total +100
+                }
+            }
+        if(cash.value>=total){
+            balance = total-cash.value;
+        }
+        else{
+            if(confirm("Invalid amount you entered!!")){
+                reamount = prompt("enter Amount");
+                balance=reamount-total
+            }
+            else{
+                window.open( "PizzaSum.html", "_blank")
+            }
+        }
+         
+         console.log(total)
+         console.log(balance)
+        }
+
+
+
+    </script>
+</body>
+</html>
